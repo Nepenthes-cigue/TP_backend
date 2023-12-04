@@ -33,3 +33,4 @@
 ### *Informations* : 
 - le mot de passe est chiffré et salé.
 - Les users arrivent dans la table ero-users
+- l'email est unique - en cas de création d'un user avec le même email, cela ne passe pas mais le serveur doit être relancé.
