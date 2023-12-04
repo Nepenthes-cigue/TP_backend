@@ -17,6 +17,7 @@ module.exports = function getRouter(){
     const router = Router()
     //liste des routes
     router.post('/api/v2/user',controleur.controleurCreateUser)
+    router.post('/api/v2/token',controleur.controleurLogin) //authentification : connexion, POST = envoi de données et reponse
     return router
 }
 
