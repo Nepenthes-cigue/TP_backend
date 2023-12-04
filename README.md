@@ -10,10 +10,7 @@
 
 - npm init 
 - npm install
-- npm i express
-- npm install dotenv
-- npm install mongoose
-- npm install bcrypt
+*npm install permet d'installer toutes les dépendances visibles dans le package.json*
 ---
 - Faire un node app.js pour lancer le serveur
 
