@@ -1,5 +1,12 @@
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const debug = require('debug')('backend:services:auth');
 
-exports.generateAccessToken = function (user) {
-  return jwt.sign(user, process.env.TOKEN_SECRET, { expiresIn: '1800s' }); //créer un acces token (pour eviter de se reconnecter a chaque fois)
-}
+exports.generateAccessToken = (user) => {
+    debug('generating access token : ', user.email);
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1800s' });
+  }
+
+exports.generateRefreshToken = (user) => {
+    debug('generating refresh token : ', user.email);
+    return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '1y' });
+  }
