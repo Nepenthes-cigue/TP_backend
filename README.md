@@ -1,11 +1,11 @@
 ## 0- Sommaire
 - [x] Créer un compte avec son nom, son email et un mot de passe. 
-- [x] se connecter avec son email et son mot de passe
-- [ ] générer un token
-- [ ] chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
-- [ ] retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
-- [ ] supprimer un résultat de recherche
-- [ ] relancer une recherche déjà effectué
+- [x] Se connecter avec son email et son mot de passe
+- [ ] Générer un token
+- [ ] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
+- [ ] Retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
+- [ ] Supprimer un résultat de recherche
+- [ ] Relancer une recherche déjà effectué
 
 
 # 1- Mise en place du projet
