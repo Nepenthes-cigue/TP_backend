@@ -1,5 +1,5 @@
 const services = require("../service/recherche.js")
-const debug = require('debug')('TP_FINAL:controleur:controleurRecherche')
+const debug = require('debug')('TP_FINAL:api:controleurRecherche')
 
 
 exports.controleurRechercheAppt = async function(req,res) {     //body quand dans zone de texte, query quand directement dans url

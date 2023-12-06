@@ -1,5 +1,5 @@
 const dpe = require("../model/modelDpe.js") //import du model dpe
-const debug = require('debug')('backend:services:recherche');
+const debug = require('debug')('TP_FINAL:service:recherche');
 
 exports.recherche = async function (Etiquette_GES, Etiquette_DPE, Adresse) {
     debug('search by DPE, GES, Adresse ');
@@ -14,7 +14,6 @@ exports.recherche = async function (Etiquette_GES, Etiquette_DPE, Adresse) {
     if (Adresse != undefined) {
         query.Adresse = Adresse
     }
-
 
     const searchAppt = await dpe.find(query)
     return searchAppt
