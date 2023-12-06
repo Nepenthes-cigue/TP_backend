@@ -1,7 +1,8 @@
 ## 0- Sommaire
 - [x] Créer un compte avec son nom, son email et un mot de passe. 
 - [x] Se connecter avec son email et son mot de passe
-- [ ] Générer un token
+- [x] Générer un access token
+- [ ] Générer un refresh token
 - [ ] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
 - [ ] Retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
 - [ ] Supprimer un résultat de recherche
@@ -40,7 +41,7 @@
 - le mot de passe est chiffré et salé.
 - Les users arrivent dans la table ero-users
 - l'email est unique - en cas de création d'un user avec le même email, cela ne passe pas mais le serveur doit être relancé.
-
+---
 ## 4- Se connecter
 - Ouvrir Postman
 - Se mettre en POST puis choisir l'URL sous forme http://localhost:XXXX/api/v1/user
