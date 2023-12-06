@@ -1,0 +1,19 @@
+const mongoose = require('mongoose')
+
+const { Schema } = mongoose
+
+const dpeSchema = new Schema({ //Number = int
+    "N°_département_(BAN)" : Number,
+    Date_réception_DPE : String,
+    Date_établissement_DPE : String,
+    Date_visite_diagnostiqueur : String,
+    Etiquette_GES : String,
+    Etiquette_DPE : String,
+    Année_construction : Number,
+    Surface_habitable_logement : Number,
+    "Adresse_(BAN)" : String,
+    "Code_postal_(BAN)" : Number,
+})
+
+const dpe = mongoose.model('dpe.depmini72', dpeSchema)
+exports.dpe = dpe
