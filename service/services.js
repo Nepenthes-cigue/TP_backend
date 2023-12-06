@@ -5,6 +5,7 @@ const fs = require("fs") //librairie qui permet d'ouvrir des fichiers
 const user = require("../model/modelUser.js").user //appel de la fonction Pokemon du modelPokemon.js
 const bcrypt = require('bcrypt') //appel de librairie bcrypt pour crypter le password
 const debug = require('debug')('TP_FINAL:service:services') //appel de librairie debug pour les logs
+const auth = require('./auth.js') //appel de la fonction auth du auth.js
 
 // 1 module par service
 //Sans BDD
@@ -36,13 +37,15 @@ exports.logServicesLogin = async function (login, password) {
 exports.servicesLogin = async function (login, password) {
     try {
         return await user.findOne({ email: login }).then(async (user) => {
+            //console.log("Bonjour", login, password)
             if (!user) {
                 return { message: "Utilisateur inconnu" }
             }
             else {
                 let passwordcrypt = await bcrypt.compare(password, user.password) //compare le password avec le password crypté
                 if (passwordcrypt) {
-                    return { message: "Utilisateur connecté" }
+                    let token = auth.generateAccessToken(user)
+                    return { message: "Utilisateur connecté", token: token}
                 }
                 else {
                     return { message: "Mot de passe incorrect" }
@@ -51,7 +54,7 @@ exports.servicesLogin = async function (login, password) {
         })
     } catch (err) {
         debug('error searching for user : ', err)
-        return { message: "Utilisateur inconnu" }
+        return { message: "Connexion impossible" }
     }
 }
 

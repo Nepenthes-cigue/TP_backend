@@ -1,4 +1,5 @@
 const services = require("../service/services.js")
+const debug = require('debug')('TP_FINAL:controleur:controleurUser')
 
 //Sans BDD
 exports.controleurUser = function (req, res) {
