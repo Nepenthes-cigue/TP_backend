@@ -1,8 +1,9 @@
 ## 0- Sommaire
+*Une case cochée est un cas implémenté et testé OK*
 - [x] Créer un compte avec son nom, son email et un mot de passe. 
 - [x] Se connecter avec son email et son mot de passe
 - [x] Générer un access token
-- [ ] Générer un refresh token
+- [x] Générer un refresh token
 - [ ] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
 - [ ] Retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
 - [ ] Supprimer un résultat de recherche
@@ -26,7 +27,7 @@
 
 ## 3- Créer un compte avec son nom, son email et un mot de passe.
 - Ouvrir Postman
-- Se mettre en POST puis choisir l'URL sous forme http://localhost:XXXX/api/v1/user
+- Se mettre en POST puis choisir l'URL sous forme http://localhost:XXXX/api/v2/user
 - Choisir raw et JSON
 - Mettre un user dans le body sous la forme :
 ```
@@ -44,7 +45,7 @@
 ---
 ## 4- Se connecter
 - Ouvrir Postman
-- Se mettre en POST puis choisir l'URL sous forme http://localhost:XXXX/api/v1/user
+- Se mettre en POST puis choisir l'URL sous forme http://localhost:XXXX/api/v2/login
 - Choisir raw et JSON
 - Mettre un user dans le body sous la forme :
 ```
@@ -61,4 +62,6 @@
 - Si le mail ne correspond pas, cela renvoie "utilisateur inconnu"
 
 ---
-
+## 4- Refresh Token
+- Ouvrir Postman
+- Se mettre en GET puis choisir l'URL sous forme http://localhost:XXXX/api/v2/refreshToken

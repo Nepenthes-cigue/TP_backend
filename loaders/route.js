@@ -21,7 +21,7 @@ module.exports = function getRouter(){
     //liste des routes
     router.post('/api/v2/user',userControleur.controleurCreateUser)
     router.post('/api/v2/login',userControleur.controleurLogin) //authentification : connexion, POST = envoi de données et reponse
-    router.get('/refreshToken', authControleur.refreshToken);
+    router.get('/api/v2/refreshToken', authControleur.refreshToken);
     return router
 }
 

@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 const Services = require('../service/auth')
 const UserServices = require('../service/services')
+require('dotenv').config()
 
 exports.login = async (req, res) => {
     // TODO: fetch le user depuis la db basé sur l'email passé en paramètre
