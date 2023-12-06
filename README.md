@@ -4,7 +4,7 @@
 - [x] Se connecter avec son email et son mot de passe
 - [x] Générer un access token
 - [x] Générer un refresh token
-- [En cours] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
+- [ ] [En cours] Chercher la géolocalisation (latitude ,longitude ) en fournissant le code postal et les deux valeur DPE et GES.
 - [ ] Retrouver l'ensemble des résultats de ses recherches précédentes : il faut sauvegarder les recherches de l'utilisateur.
 - [ ] Supprimer un résultat de recherche
 - [ ] Relancer une recherche déjà effectué
